@@ -11,7 +11,7 @@ public class Fibonacci {
 		System.out.print(first_n + " " + second_n + " ");
 	
 	
-	    for (int i = 0; i < 10; i++) {
+	    for (int i = 0; i < 12; i++) {
 	    	int next_n = first_n + second_n;
 	    	first_n = second_n;
 	    	second_n = next_n;
