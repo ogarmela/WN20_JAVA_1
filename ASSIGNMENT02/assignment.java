@@ -1,22 +1,22 @@
-package chap3exercise;
-
-import java.util.HashSet;
-import java.util.Map;
 
 public class assignment {
-	public boolean isUnique(Map<String, String> map) {
-	    HashSet<String> set = new HashSet<String>();
-
-	    for(String key : map.keySet()) {
-	        String value = map.get(key);
-
-	        if(set.contains(value))
-	            return false;
-
-	        set.add(value);
+	public boolean isSorted() {
+	    ListNode pre = front;
+	    
+	    if (front == null) {
+	        return true;
 	    }
-
+	    
+	    while (pre.next != null) {
+	        ListNode current = pre.next;
+	        if (current.data < pre.data) {
+	            return false;
+	        }
+	        pre = current;
+	    }
+	    
 	    return true;
 	}
+
 
 }
